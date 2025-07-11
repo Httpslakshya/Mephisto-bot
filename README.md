@@ -1,4 +1,4 @@
-# 💀 Mephisto_Killer — Telegram-Based C2 Bot
+# 💀 Mephisto_bot — Telegram-Based C2 Bot
 
 ![Python](https://img.shields.io/badge/language-python-blue?style=flat&logo=python)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-critical?logo=windows&logoColor=white)
