@@ -38,12 +38,26 @@ git clone https://github.com/Httpslakshya/Mephisto-bot.git
 cd Mephisto-bot
 pip install -r requirements.txt
 ```
-### 2️⃣ Install Requirements
-```bash
+### 2️⃣ Create Your Telegram Bot & Configure
+Before you run Mephisto_Killer, follow these steps to set up your own Telegram bot:
 
-pip install -r requirements.txt
+#### 🪪 Step 1: Get Bot Token
+
+1. Open Telegram and search for [@BotFather](https://t.me/BotFather)  
+2. Send `/start` and then `/newbot`  
+3. Choose a **name** and **username** for your bot  
+4. After successful creation, you'll receive a **bot token** like:  
+
+```bash 
+ 123456789:ABCDefghIJKLmnoPQRStuvWXyz
 ```
-### 3️⃣ Configure Your Bot
+
+#### 🪪 Step 2: Get Your Telegram User ID
+  
+ 1. Search for @userinfobot on Telegram
+ 2. Start the bot and it will show your numeric User ID (e.g., 586947123)
+
+### 3️⃣ Add Credentials to Configure Your Bot
 Create the config file:
 ```bash
 bot_core/config.py
