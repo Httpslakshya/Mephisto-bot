@@ -2,11 +2,7 @@ import os
 import re
 from telebot.types import Message
 from bot_core.config import BOT_ADMIN_ID
-
-# Escape MarkdownV2 special characters
-def escape_markdown(text):
-    escape_chars = r"_*[]()~`>#+=|{}.!\\-"
-    return re.sub(f"([{re.escape(escape_chars)}])", r"\\\1", text)
+from bot_core.utils.escape import escape_markdown
 
 # Start in user's home directory
 current_dir = os.path.expanduser("~")

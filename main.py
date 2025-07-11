@@ -7,6 +7,8 @@ from bot_core.modules.explorer import attach_explorer_handlers
 from bot_core.modules.file_receive import attach_file_receive_handlers
 from bot_core.modules.surveillance import attach_surveillance_handlers
 # from bot_core.modules.folder_watch import start_folder_watch
+from bot_core.utils.escape import escape_markdown
+
 def get_token():
     with open("token.txt", "r") as f:
         return f.read().strip()
@@ -32,7 +34,12 @@ def start_handler(message):
     if message.from_user.id != BOT_ADMIN_ID:
         bot.reply_to(message, "❌ Unauthorized user.")
         return
-    bot.reply_to(message, f"🤖 Mephisto_Killer active on `{MACHINE_NAME}`.\nAwaiting your command...", parse_mode='Markdown')
+    bot.reply_to(
+        message,
+        escape_markdown(f"🤖 Mephisto_Killer active on `{MACHINE_NAME}`.\nAwaiting your command..."),
+        parse_mode='Markdown'
+    )
+
 
 # Start polling
 bot.infinity_polling()
